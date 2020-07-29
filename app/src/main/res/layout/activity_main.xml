@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnReplaceWithA"
+        android:text="Go to \n frag B"
+        android:layout_marginLeft="8dp"
+        android:layout_alignParentTop="true"
+        android:onClick="replacewithA"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:id="@+id/btnReplaceWithB"
+        android:text="Go to \n frag A"
+        android:layout_alignParentTop="true"
+        android:onClick="replacewithB"
+        android:layout_toRightOf="@+id/btnReplaceWithA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+    <Button
+        android:id="@+id/btnReplaceWithC"
+        android:text="Go to \n frag C"
+        android:layout_alignParentTop="true"
+        android:onClick="replacewithC"
+        android:layout_toRightOf="@+id/btnReplaceWithB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:id="@+id/btnAdd_D"
+        android:text="Go to \n frag D"
+        android:onClick="replacewithD"
+        android:layout_toRightOf="@+id/btnReplaceWithC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+
+    <Button
+        android:id="@+id/btnAdd_A"
+        android:text="Add A"
+        android:onClick="addA"
+        android:layout_below="@id/btnReplaceWithA"
+        android:layout_alignLeft="@+id/btnReplaceWithA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:id="@+id/btnRemove_A"
+        android:text="Remove A"
+        android:onClick="removeA"
+        android:layout_below="@id/btnReplaceWithA"
+        android:layout_toRightOf="@+id/btnAdd_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:id="@+id/btnDetach_A"
+        android:text="Detach A"
+        android:onClick="detachA"
+        android:layout_below="@id/btnReplaceWithA"
+        android:layout_toRightOf="@+id/btnRemove_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+
+
+    <Button
+        android:id="@+id/btnAdd_B"
+        android:text="Add B"
+        android:onClick="addB"
+        android:layout_below="@id/btnAdd_A"
+        android:layout_alignLeft="@+id/btnReplaceWithA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:id="@+id/btnRemove_B"
+        android:text="Remove B"
+        android:onClick="removeB"
+        android:layout_below="@id/btnAdd_A"
+        android:layout_toRightOf="@+id/btnAdd_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:id="@+id/btnDetach_B"
+        android:text="Attach A"
+        android:onClick="attachA"
+        android:layout_below="@id/btnAdd_A"
+        android:layout_toRightOf="@+id/btnRemove_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+
+    <Button
+        android:id="@+id/btnBack"
+        android:text="Back"
+        android:onClick="Back"
+        android:layout_below="@+id/btnAdd_B"
+        android:layout_alignLeft="@+id/btnReplaceWithA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:id="@+id/btnPopup"
+        android:text="Pop Add B"
+        android:onClick="popAddB"
+        android:layout_toRightOf="@+id/btnBack"
+        android:layout_below="@+id/btnAdd_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:id="@+id/btnAddC"
+        android:text="Add c"
+        android:onClick="popAddC"
+        android:layout_toRightOf="@+id/btnPopup"
+        android:layout_below="@+id/btnAdd_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        android:layout_below="@+id/btnBack"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/group"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:background="#ffeeee"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#ffeeee"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+            </ScrollView>
+
+        
+    </LinearLayout>
+
+</RelativeLayout>
